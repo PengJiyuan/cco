@@ -7,7 +7,13 @@
 
 <script src="../dist/cco.js"></script>
 <script>
-  console.log(cco.lighten('#ef8376', '20%'));
+  console.log(cco.darken('#ccc', '10%'));
+  console.log(cco.getRgb('#ccc'));
+  console.log(cco.getHsl('#ccc'));
+  console.log(cco.isHex('#ccc'));
+  console.log(cco.lighten('#ccc', '10%'));
+  console.log(cco.darken('#ccc', '10%'));
+  console.log(JSON.stringify(cco.hexToRgb('#ccc')));
 </script>
 </body>
 </html>

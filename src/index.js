@@ -3,7 +3,7 @@ class Color {
   constructor() {}
 
   // converts hex to RGB
-  hexToRGB(hex) {
+  hexToRgb(hex) {
     const rgb = [];
 
     hex = hex.substr(1);
@@ -26,7 +26,7 @@ class Color {
   }
 
   // converts rgb to HSL
-  rgbToHSL(r, g, b) {
+  rgbToHsl(r, g, b) {
     r /= 255, g /= 255, b /= 255;
     const max = Math.max(r, g, b),
       min = Math.min(r, g, b);
@@ -60,7 +60,7 @@ class Color {
   }
 
   // converts hsl to RGB
-  hslToRGB() {
+  hslToRgb() {
   }
 
   // color lighten
@@ -118,7 +118,7 @@ class Color {
   getRgb(color) {
     let rgb, r, g, b;
     if(this.isHex(color)) {
-      rgb = this.hexToRGB(color);
+      rgb = this.hexToRgb(color);
       [ r, g, b ] = [ rgb.r, rgb.g, rgb.b ];
     } else if(this.isRgb(color)) {
       rgb = color.slice(4, -1).split(',');
@@ -140,7 +140,7 @@ class Color {
     rgb = this.getRgb(color);
     [ r, g, b ] = [ rgb.r, rgb.g, rgb.b ];
 
-    hsl = this.rgbToHSL(r, g, b);
+    hsl = this.rgbToHsl(r, g, b);
     [ h, s, l ] = [ hsl.h, hsl.s, hsl.l ];
 
     return { h, s, l };

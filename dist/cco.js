@@ -7,7 +7,7 @@
 var Color = function Color() {};
 
 // converts hex to RGB
-Color.prototype.hexToRGB = function hexToRGB (hex) {
+Color.prototype.hexToRgb = function hexToRgb (hex) {
   var rgb = [];
 
   hex = hex.substr(1);
@@ -30,7 +30,7 @@ Color.prototype.hexToRGB = function hexToRGB (hex) {
 };
 
 // converts rgb to HSL
-Color.prototype.rgbToHSL = function rgbToHSL (r, g, b) {
+Color.prototype.rgbToHsl = function rgbToHsl (r, g, b) {
   r /= 255, g /= 255, b /= 255;
   var max = Math.max(r, g, b),
     min = Math.min(r, g, b);
@@ -64,7 +64,7 @@ Color.prototype.rgbToHSL = function rgbToHSL (r, g, b) {
 };
 
 // converts hsl to RGB
-Color.prototype.hslToRGB = function hslToRGB () {
+Color.prototype.hslToRgb = function hslToRgb () {
 };
 
 // color lighten
@@ -122,7 +122,7 @@ Color.prototype.isRgba = function isRgba (color) {
 Color.prototype.getRgb = function getRgb (color) {
   var rgb, r, g, b;
   if(this.isHex(color)) {
-    rgb = this.hexToRGB(color);
+    rgb = this.hexToRgb(color);
     var assign;
       (assign = [ rgb.r, rgb.g, rgb.b ], r = assign[0], g = assign[1], b = assign[2]);
   } else if(this.isRgb(color)) {
@@ -148,7 +148,7 @@ Color.prototype.getHsl = function getHsl (color) {
   var assign;
     (assign = [ rgb.r, rgb.g, rgb.b ], r = assign[0], g = assign[1], b = assign[2]);
 
-  hsl = this.rgbToHSL(r, g, b);
+  hsl = this.rgbToHsl(r, g, b);
   var assign$1;
     (assign$1 = [ hsl.h, hsl.s, hsl.l ], h = assign$1[0], s = assign$1[1], l = assign$1[2]);
 
