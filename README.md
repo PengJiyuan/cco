@@ -1,6 +1,6 @@
 # cco
 
-*coo* is a tiny tool to transfer color.
+*coo* is a tiny tool to transform color.
 
 ## Install
 
