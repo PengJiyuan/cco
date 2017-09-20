@@ -6,8 +6,8 @@ export default {
     bubble()
   ],
   output: {
-    file: 'dist/c.js',
-    name: 'c',
+    file: 'dist/cco.js',
+    name: 'cco',
     format: 'umd'
   }
 };
